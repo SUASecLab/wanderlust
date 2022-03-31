@@ -683,14 +683,14 @@ u08 assembler_writeline_byte (u16 index, const u08* buffer, u32 buflen, u16 offs
 
 s08 assembler_initialize (lua_State * L)
 {
-  f_cursor = f_editor = 0x8000;
+  f_cursor = f_editor = 0x0000;
 
   return e_configuration.success;
 }
 
 nil assembler_terminate ()
 {
-  f_cursor = f_editor = 0x8000;
+  f_cursor = f_editor = 0x0000;
 }
 
 u16 assembler_get_cursor ()

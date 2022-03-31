@@ -534,7 +534,7 @@ static nil FN (0B) (core * c)
 
 /*******************************************************************************
  * 
- * INX C
+ * INR C
  *
  ******************************************************************************/
 
@@ -1194,7 +1194,7 @@ static nil FN (45) (core * c)
 
 static nil FN (46) (core * c)
 {
-  c->BC.R08.L = f_memory [c->PC.R16 + 1];
+  c->BC.R08.L = f_memory [c->HL.R16];
 }
 
 /*******************************************************************************
@@ -1282,7 +1282,7 @@ static nil FN (4D) (core * c)
 
 static nil FN (4E) (core * c)
 {
-  c->BC.R08.H = f_memory [c->PC.R16 + 1];
+  c->BC.R08.H = f_memory [c->HL.R16];
 
 }
 
@@ -1371,7 +1371,7 @@ static nil FN (55) (core * c)
 
 static nil FN (56) (core * c)
 {
-  c->DE.R08.L = f_memory [c->PC.R16 + 1];
+  c->DE.R08.L = f_memory [c->HL.R16];
 }
 
 /*******************************************************************************
@@ -1459,7 +1459,7 @@ static nil FN (5D) (core * c)
 
 static nil FN (5E) (core * c)
 {
-  c->DE.R08.L = f_memory [c->PC.R16 + 1];
+  c->DE.R08.L = f_memory [c->HL.R16];
 }
 
 /*******************************************************************************
@@ -1547,7 +1547,7 @@ static nil FN (65) (core * c)
 
 static nil FN (66) (core * c)
 {
-  c->HL.R08.L= f_memory [c->PC.R16 + 1];
+  c->HL.R08.L= f_memory [c->PC.R16];
 }
 
 /*******************************************************************************
@@ -1635,7 +1635,7 @@ static nil FN (6D) (core * c)
 
 static nil FN (6E) (core * c)
 {
-  c->HL.R08.H = f_memory [c->PC.R16 + 1];
+  c->HL.R08.H = f_memory [c->HL.R16];
 }
 
 /*******************************************************************************
@@ -3575,13 +3575,14 @@ s32 core_exec (core * c)
   {
     f_instruction [(c->OP = f_memory [c->PC.R16])] (c);
     c->PC.R16 += 1;
-  }
-
-  if (0) {    
-    printf ("done with 0x%08X cycles\n", cycles);
     core_dump (c);  
   }
-
+/*
+  if (0) {    
+    printf ("done with 0x%08X cycles\n", cycles);
+    
+  }
+*/
   
   c->e = 0x00;
 
@@ -3629,8 +3630,6 @@ s32 core_execute ()
   core c;
 
   memset (&c, 0, sizeof (core));
-
-  c.SP.R16 = 0xFFFF;
 
   return core_exec (&c);
 }

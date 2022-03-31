@@ -59,6 +59,7 @@ s32 main (int argc, char ** argv)
 		return WANDERLUST_FAILURE;
 	}
 
+/*
 	assembler_set_byte (0x0000, 0x21);
 	assembler_set_byte (0x0001, 0x34);
 	assembler_set_byte (0x0002, 0x56);
@@ -66,7 +67,7 @@ s32 main (int argc, char ** argv)
 	assembler_set_byte (0x0004, 0x04);
 	assembler_set_byte (0x0005, 0x06);
 	assembler_set_byte (0x0006, 0x78);
-
+*/
 	core_init ();
 	
 	if (engine_execute () == WANDERLUST_FAILURE)
