@@ -3,7 +3,7 @@ function init ()
 end
 
 function on_key_up ()
-   wl_select_menu_entity ("Save")
+   --wl_select_menu_entity ("Save")
 end
 
 function on_key_down ()

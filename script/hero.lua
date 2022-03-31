@@ -15,12 +15,12 @@ end
 function on_key_start ()
    wl_create_menu ("pause", 8, 8, "frame.png")
    
-   wl_create_entity (2, 8,8, "Pokedex", "script/game.start/start.menu.pokedex.lua", "white", "red", "yellow", "gray")
-   wl_create_entity (2, 8,24, "Pokemon", "script/game.start/start.menu.pokemon.lua", "white", "red", "yellow", "gray")
-   wl_create_entity (2, 8,40, "Inventory", "script/game.start/start.menu.inventory.lua", "white", "red", "yellow", "gray")
-   wl_create_entity (2, 8,56, "PokeCom", "script/game.start/start.menu.pokecom.lua", "white", "red", "yellow", "gray")
-   wl_create_entity (2, 8,72, "Trainer", "script/game.start/start.menu.trainer.lua", "white", "red", "yellow", "gray")
-   wl_create_entity (2, 8,88, "Save", "script/game.start/start.menu.save.lua", "white", "red", "yellow", "gray")
+   wl_create_entity (2, 8,8, "Map", "script/game.start/start.menu.pokedex.lua", "mediumgray", "red", "yellow", "gray")
+   wl_create_entity (2, 8,24, "Status", "script/game.start/start.menu.pokemon.lua", "mediumgray", "red", "yellow", "gray")
+   wl_create_entity (2, 8,40, "Inventory", "script/game.start/start.menu.inventory.lua", "mediumgray", "red", "yellow", "gray")
+   wl_create_entity (2, 8,56, "Help", "script/game.start/start.menu.pokecom.lua", "mediumgray", "red", "yellow", "gray")
+   wl_create_entity (2, 8,72, "Load", "script/game.start/start.menu.trainer.lua", "mediumgray", "red", "yellow", "gray")
+   wl_create_entity (2, 8,88, "Save", "script/game.start/start.menu.save.lua", "mediumgray", "red", "yellow", "gray")
    wl_create_entity (2, 8,104, "Option", "script/game.start/start.menu.option.lua", "white", "red", "yellow", "gray")
    wl_create_entity (2, 8,120, "Quit", "script/game.start/start.menu.quit.lua", "white", "red", "yellow", "gray")
    
@@ -28,7 +28,7 @@ function on_key_start ()
    
    wl_rundown_task ()
 
-   wl_select_menu_entity ("Pokedex")
+   wl_select_menu_entity ("Option")
 end
 
 function on_key_back ()
