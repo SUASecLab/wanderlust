@@ -43,19 +43,39 @@ function on_key_a ()
 end
 
 function on_key_x ()
-	wl_increment_cursor_terminal ()
+	
 end
 
 function on_key_y ()
-	wl_decrement_cursor_terminal ()
+   wl_create_textbox (
+      "white", 
+      "CALL IF POSITIVE              " ..
+      "                              " ..
+      "The CP instruction combines   " ..
+      "features of the JMP and PUSH  " ..
+      "instructions. CP tests the    " ..
+      "setting of the sign flag. If  " ..
+      "the flag is set to zero (indi-" ..
+      "cating that the contents of   " ..
+      "the accumulator are positive)." ..
+      "CP pushes the contents of the " ..
+      "program counter onto the stack" ..
+      "and then jumps to the address " ..
+      "specified by the CP           " ..
+      "Instruction. If the flag is   " ..
+      "set to one, program execution " ..
+      "simply continues with the next" ..
+      "sequential instruction.",
+      "frame.png"
+   ) 	
 end
 
 function on_key_start ()
-	wl_run_terminal ()
+	
 end
 
 function on_key_back ()
-	wl_clear_terminal ()
+	
 end
 
 init ()

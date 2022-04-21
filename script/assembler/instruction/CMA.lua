@@ -25,11 +25,25 @@ function on_key_a ()
 end
 
 function on_key_x ()
-	wl_increment_cursor_terminal ()
+	
 end
 
 function on_key_y ()
-	wl_decrement_cursor_terminal ()
+	wl_create_textbox (
+      "white", 
+      "COMPLEMENT ACCUMULATOR        " ..
+      "                              " ..
+  		"The instruction complements   " ..
+  		"each bit of the accumulator to" ..
+  		"produce it's one's complement." ..
+  		"All condition flags remain un-" ..
+  		"changed. To produce the two's " ..
+  		"complement, add one to the    " ..
+  		"contents of the accumulator   " ..
+  		"after the CMA instructions has" ..
+		"been executed.",
+      "frame.png"
+   )
 end
 
 function on_key_b ()
@@ -37,11 +51,11 @@ function on_key_b ()
 end
 
 function on_key_start ()
-	wl_run_terminal ()
+	
 end
 
 function on_key_back ()
-	wl_clear_terminal ()
+	
 end
 
 init ()

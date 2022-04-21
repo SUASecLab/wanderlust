@@ -43,19 +43,40 @@ function on_key_a ()
 end
 
 function on_key_x ()
-	wl_increment_cursor_terminal ()
+
 end
 
 function on_key_y ()
-	wl_decrement_cursor_terminal ()
+   wl_create_textbox (
+      "white", 
+      "CALL IF NOT ZERO              " ..
+      "                              " ..
+      "The CNZ In, tructlon combines " ..
+      "functions of the JNZ and PUSH " ..
+      "Instructions. CNZ tests the   " ..
+      "setting of the zero flag. If  " ..
+      "the flag is off (indicating   " ..
+      "that the contents of the accu-" ..
+      "mulator are other than zero), " ..
+      "CNZ pushes the contents of the" ..
+      "program counter onto the stack" ..
+      "and then jumps to the address " ..
+      "specified in the Instruction's" ..
+      "second and third bytes. If the" ..
+      "flag is set to one, program   " ..
+      "execution simply continues    " ..
+      "with the next sequential      " ..
+      "instruction.",
+      "frame.png"
+   ) 
 end
 
 function on_key_start ()
-	wl_run_terminal ()
+
 end
 
 function on_key_back ()
-	wl_clear_terminal ()
+
 end
 
 init ()

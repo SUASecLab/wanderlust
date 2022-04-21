@@ -43,19 +43,51 @@ function on_key_a ()
 end
 
 function on_key_x ()
-	wl_increment_cursor_terminal ()
+	
 end
 
 function on_key_y ()
-	wl_decrement_cursor_terminal ()
+	wl_create_textbox (
+      "white", 
+      "CALL IF PARITY ODD            " ..
+      "                              " ..
+      "Parity is odd if the byte in  " ..
+      "the accumulator has an odd    " ..
+      "number of one bits. The parity" ..
+      "flag is set to zero to        " ..
+      "indicate this condition. The  " ..
+      "CPO and CPE instructions are  " ..
+      "useful for testing the parity " ..
+      "of input data. However, the IN" ..
+      "instruction does not set any  " ..
+      "of the condition flags. The   " ..
+      "flags can be set without      " ..
+      "altering the data by adding 0h" ..
+      "to the contents of the        " ..
+      "accumulator. The CPO          " ..
+      "instruction combines functions" ..
+      "of the J PO and PUSH          " ..
+      "instructions. CPO tests the   " ..
+      "setting of the parity flag. If" ..
+      "the flag is set to zero, CPO  " ..
+      "pushes the contents of the    " ..
+      "program counter onto the stack" ..
+      "and then jumps to the address " ..
+      "specified by the CPO          " ..
+      "instruction. If the flag is   " ..
+      "set to one, program execution " ..
+      "simply continues with the next" ..
+      "sequential instruction.",
+      "frame.png"
+   ) 	
 end
 
 function on_key_start ()
-	wl_run_terminal ()
+	
 end
 
 function on_key_back ()
-	wl_clear_terminal ()
+	
 end
 
 init ()

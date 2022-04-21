@@ -25,19 +25,28 @@ function on_key_a ()
 end
 
 function on_key_x ()
-	wl_increment_cursor_terminal ()
+	
 end
 
 function on_key_y ()
-	wl_decrement_cursor_terminal ()
+	wl_create_textbox (
+      "white", 
+      "COMPLEMENT CARRY              " ..
+      "                              " ..
+  		"If the carry flag equals zero," ..
+  		"CMC sets it to 1 and otherwise" ..
+  		"to zero. All other flags will " ..
+  		"remain unchanged.",
+      "frame.png"
+   )	
 end
 
 function on_key_start ()
-	wl_run_terminal ()
+	
 end
 
 function on_key_back ()
-	wl_clear_terminal ()
+	
 end
 
 init ()

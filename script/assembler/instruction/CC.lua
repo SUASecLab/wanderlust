@@ -55,7 +55,7 @@ function on_key_y ()
       "white", 
       "CALL IF CARRY                 " ..
       "                              " ..
-  		"The CC instnlction combines   " ..
+  		"The CC instruction combines   " ..
   		"functions of the JC and PUSH  " ..
   		"instructions. CC tests the    " ..
   		"setting of the carry flag. If " ..

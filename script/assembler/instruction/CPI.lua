@@ -43,19 +43,42 @@ function on_key_a ()
 end
 
 function on_key_x ()
-	wl_increment_cursor_terminal ()
+	
 end
 
 function on_key_y ()
-	wl_decrement_cursor_terminal ()
+	wl_create_textbox (
+      "white", 
+      "COMPARE IMMEDIATE             " ..
+      "                              " ..
+      "CPI compare, the contents of  " ..
+      "the second instruction byte   " ..
+      "with the contents of the accu-" ..
+      "mulator and sets the zero and " ..
+      "carry flag to indicate the    " ..
+      "result. The values being      " ..
+      "compared remain unchanged. The" ..
+      "zero flag Indicates equality. " ..
+      "No carry indicates that the   " ..
+      "contents of the accumulator   " ..
+      "are greater than the immediate" ..
+      "data; a carry Indicates that  " ..
+      "the accumulator is less than  " ..
+      "the immediate data. However,  " ..
+      "the meaning of the carry 1lag " ..
+      "is reversed when the values   " ..
+      "have different signs or one of" ..
+      "the values is complemented.",
+      "frame.png"
+   ) 
 end
 
 function on_key_start ()
-	wl_run_terminal ()
+	
 end
 
 function on_key_back ()
-	wl_clear_terminal ()
+	
 end
 
 init ()

@@ -47,19 +47,43 @@ function on_key_b ()
 end
 
 function on_key_x ()
-	wl_increment_cursor_terminal ()
+
 end
 
 function on_key_y ()
-	wl_decrement_cursor_terminal ()
+	wl_create_textbox (
+      "white", 
+      "CALL IF MINUS                 " ..
+      "                              " ..
+  		"The CM instruction combines   " ..
+  		"functions of the JM and PUSH  " ..
+  		"instructions. It tests the    " ..
+  		"setting of the sign flag. If  " ..
+  		"the flag is set to one (indi- " ..
+  		"cating that the content of the" ..
+  		"accumulator are minus), CM    " ..
+  		"pushes the contents of the    " ..
+  		"program counter onto the stack" ..
+  		"and then jumps to the address " ..
+  		"specified by the instruction  " ..
+  		"cm. If the flag is set to zero" ..
+  		"or program execution simply   " ..
+  		"continues with the next       " ..
+  		"sequential instruction. Al-   " ..
+  		"though the use of a label is  " ..
+  		"most common, the address may  " ..
+  		"also be specified as a number " ..
+  		"or an expression.",
+      "frame.png"
+   )
 end
 
 function on_key_start ()
-	wl_run_terminal ()
+
 end
 
 function on_key_back ()
-	wl_clear_terminal ()
+
 end
 
 init ()

@@ -43,19 +43,51 @@ function on_key_a ()
 end
 
 function on_key_x ()
-	wl_increment_cursor_terminal ()
+	
 end
 
 function on_key_y ()
-	wl_decrement_cursor_terminal ()
+   wl_create_textbox (
+      "white", 
+      "CALL IF PARITY EVEN           " ..
+      "                              " ..
+      "Parity is even if the byte in " ..
+      "the accumulator has an even   " ..
+      "number of one bits. The parity" ..
+      "flag is set to one to indicate" ..
+      "this condition. The CPE and   " ..
+      "CPO instructions are useful   " ..
+      "for testing the parity of     " ..
+      "input data. However, the IN   " ..
+      "instruction does not set any  " ..
+      "of the condition flags. The   " ..
+      "flags can be set without      " ..
+      "altering the data by adding 0h" ..
+      "to the contents of the accu-  " ..
+      "mulator. The CPE instruction  " ..
+      "combines functions of the JPE " ..
+      "and PUSH instructions. CPE    " ..
+      "tests the setting of the      " ..
+      "parity flag. If the flog is   " ..
+      "set to one, CPE pushes the    " ..
+      "contents of the program       " ..
+      "counter onto the stack and    " ..
+      "then jumps to the address that" ..
+      "is specified by the CPE       " ..
+      "instruction. If the flag is   " ..
+      "set to zero, program execution" ..
+      "simply continues with the next" ..
+      "sequential instruction.",
+      "frame.png"
+   ) 
 end
 
 function on_key_start ()
-	wl_run_terminal ()
+	
 end
 
 function on_key_back ()
-	wl_clear_terminal ()
+	
 end
 
 init ()
