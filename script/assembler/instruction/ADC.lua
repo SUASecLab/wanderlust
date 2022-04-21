@@ -39,19 +39,43 @@ function on_key_b ()
 end
 
 function on_key_x ()
-	wl_increment_cursor_terminal ()
+	
 end
 
 function on_key_y ()
-	wl_decrement_cursor_terminal ()
+	  wl_create_textbox (
+      "white", 
+      "ADD WITH CARRY                " ..
+      "                              " ..
+      "The ADC instruction adds one  " ..
+      "byte of data plus the setting " ..
+      "of the carry flag to the con- " ..
+      "tents of the accumulator. The " ..
+      "result istored in the acc-    " ..
+      "umulator, ADC then updates the" ..
+      "setting of the carry flag to  " ..
+      "indicate the outcome of the   " ..
+      "operaton. The ADC innuction's " ..
+      "use of the carry bit enables  " ..
+      "the program to add multi-byte " ..
+      "numeric strings. This         " ..
+      "instruction adds the contents " ..
+      "of the memory location        " ..
+      "addressed by the Hand L       " ..
+      "registers and the carry bit to" ..
+      "the accumulator and stores the" ..
+      "result in the accumulator. M  " ..
+      "is a symbolic reference to the" ..
+      "Hand L registers.", 
+      "frame.png")
 end
 
 function on_key_start ()
-	wl_run_terminal ()
+	
 end
 
 function on_key_back ()
-	wl_clear_terminal ()
+	
 end
 
 init ()

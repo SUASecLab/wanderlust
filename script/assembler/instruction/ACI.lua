@@ -51,7 +51,41 @@ function on_key_x ()
 end
 
 function on_key_y ()
-	
+	wl_create_textbox (
+		"white",
+		"ADD IMMEDIATE WITH CARRY      " ..
+		"                              " ..
+		"ACI adds the contents of the  " ..
+		"second instruction byte and   " ..
+		"the carry bit to the contents " ..
+		"of the accumulator and stores " ..
+		"the result in the accumulator." ..
+		"The operand Specifies the     " ..
+		"actual data to be added to the" ..
+		"accumulator except, of course," ..
+		"for the carry bit. Data may be" .. 
+		"in the form of a number, an   " ..
+		"ASCII constant, the label of a" ..
+		"previously defined value, or  " ..
+		"an expression. The data may   " ..
+		"not exceed one byte. The      " ..
+		"assemblers relocation feature " ..
+		"treats all external and relo- " ..
+		"catable symbols as 16-bit     " ..
+		"addresses. When one of these  " ..
+		"symbols appears in the operand" ..
+		"expression of an immediate    " ..
+		"instruction, It must be pre-  " ..
+		"ceded by either the HIGH or   " ..
+		"LOW operator to specify which " ..
+		"byte of the address is to be  " ..
+		"used in the evaluation of the " ..
+		"expression. When neither      " ..
+		"Operator is present, the      " ..
+		"assembler assumes the LOW     " ..
+		"operator and issues an error  " ..
+		"message.", 
+		"frame.png")
 end
 
 function on_key_start ()

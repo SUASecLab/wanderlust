@@ -39,11 +39,39 @@ function on_key_b ()
 end
 
 function on_key_x ()
-	wl_increment_cursor_terminal ()
+	
 end
 
 function on_key_y ()
-	wl_decrement_cursor_terminal ()
+	    wl_create_textbox (
+      "white", 
+      "ADD                           " ..
+      "                              " ..
+      "The ADD Instruction adds one  " ..
+      "byte of data to the contents  " ..
+      "of the accumulator. The result" ..
+      "is stored in the accumulator  " ..
+      "Notice that the ADD           " ..
+      "instruction excludes the carry" ..
+      "flag from the addition but    " ..
+      "sets the flag to indicate the " ..
+      "Outcome of the operation. The " ..
+      "operand must specify one of   " ..
+      "the registers A through E, H  " ..
+      "or L. The instruction adds the" ..
+      "contents of the specified     " ..
+      "register to the contents of   " ..
+      "the accumulator and stores the" ..
+      "result in the accumulator.    " ..
+      "This InstruCilon adds the con-" ..
+      "tents of the memory location  " ..
+      "addressed by the Hand L       " ..
+      "registers to the contents of  " ..
+      "the accumulator and stores the" ..
+      "result in the accumulator. M  " ..
+      "is a symbolic reference to the" ..
+      "Hand L registers.", 
+      "frame.png")
 end
 
 function on_key_start ()
