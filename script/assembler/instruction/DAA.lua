@@ -25,19 +25,28 @@ function on_key_a ()
 end
 
 function on_key_x ()
-	wl_increment_cursor_terminal ()
+
 end
 
 function on_key_y ()
-	wl_decrement_cursor_terminal ()
+	wl_create_textbox (
+      "white", 
+      "DECIMAL ADJUST ACCUMULATOR    " ..
+      "                              " ..
+      "The instruction adjusts the   " ..
+		"8-bit value in the accumulator" ..
+		"to form two 4-bit binary coded" ..
+		"decimal digits.",
+      "frame.png"
+   ) 	
 end
 
 function on_key_start ()
-	wl_run_terminal ()
+
 end
 
 function on_key_back ()
-	wl_clear_terminal ()
+
 end
 
 init ()

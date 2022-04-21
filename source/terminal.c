@@ -172,7 +172,7 @@ wanderlust_terminal * wanderlust_terminal_create (lua_State * L)
 	x = property_get_integer ((const s08*)PROPERTY_WINDOW_RES_W);
 	x = (x - (c * e_configuration.font.dimension)) / 2;
 	y = property_get_integer ((const s08*)PROPERTY_WINDOW_RES_H);
-	y = (y - (r * e_configuration.font.dimension)) / 2 - 16;
+	y = (y - (r * e_configuration.font.dimension)) / 2;
 
 	t->frame = frame_create_wanderlust_frame
 	(
