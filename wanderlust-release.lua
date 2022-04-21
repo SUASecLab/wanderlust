@@ -10,7 +10,7 @@ PTYPE_STR = 1
 PTYPE_PNT = 2
 PTYPE_REC = 3
 
-RES_W 				= 320
+RES_W 				= 336
 RES_H 				= 240
 TILE_EDGE_LENGTH	= 16
 

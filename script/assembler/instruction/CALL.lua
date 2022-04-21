@@ -47,19 +47,57 @@ function on_key_b ()
 end
 
 function on_key_x ()
-	wl_increment_cursor_terminal ()
+	
 end
 
 function on_key_y ()
-	wl_decrement_cursor_terminal ()
+	wl_create_textbox (
+      "white", 
+      "CALL                          " ..
+      "                              " ..
+  		"The CALL Irstructlon combines " ..
+  		"functions of the PUSH and POP " ..
+  		"Instructions. CALL pushes the " ..
+  		"content of the program counter" ..
+  		"(the sequential instruction's " ..
+  		"next address) onto the stack  " ..
+  		"and then jumps to the address " ..
+		"specified in the CALL.        " ..
+		"Each CALL Instruction or one  " ..
+		"of It's variants implies the  " ..
+		"use of a subsequent RET       " ..
+		"(return) Instruction. When a  " ..
+		"call has no corresponding RET." ..
+		"excess addresses are built up " ..
+		"in the stack. The address may " ..
+		"be specified as a number, a   " ..
+		"label, or an expression.      " ..
+		"(The label is most common) The" ..
+		"assembler inverts the high and" ..
+		"low address bytes when it     " ..
+		"assembles the instruction. The" ..
+		"larger the code segment to be " ..
+		"repeated and the greater the  " ..
+		"number of repetitions, the    " ..
+		"greater the potential memory  " ..
+		"savings of using a subroutine." ..
+		"Thus, a Routine requires one  " ..
+		"hundred bytes, coding it In-  " ..
+		"line would require three      " ..
+		"hundred bytes. Coded as a sub-" ..
+		"routine, it requires one      " ..
+		"hundred bytes plus 9 bytes for" ..
+		"the 3 CALL instructions.",
+      "frame.png"
+   )
 end
 
 function on_key_start ()
-	wl_run_terminal ()
+	
 end
 
 function on_key_back ()
-	wl_clear_terminal ()
+	
 end
 
 init ()

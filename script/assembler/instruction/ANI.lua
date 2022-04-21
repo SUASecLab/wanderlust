@@ -47,19 +47,55 @@ function on_key_b ()
 end
 
 function on_key_x ()
-	wl_increment_cursor_terminal ()
+	
 end
 
 function on_key_y ()
-	wl_decrement_cursor_terminal ()
+   wl_create_textbox (
+      "white", 
+      "AND IMMEDIATE WITH ACCUMULATOR" ..
+      "                              " ..
+      "ANI performs a logical AND op-" ..
+      "eration using the contents of " ..
+      "the of the Instruction's 2nd  " ..
+      "byte with the accumulator. The" ..
+      "result is placed In the accu- " ..
+      "mulator. ANI also resets the  " ..
+      "carry flag to zero. The       " ..
+      "operand must specify the data " ..
+      "to be used in the operation.  " ..
+      "This data may be in the form  " ..
+      "of a number, an ASCII constant" ..
+      "or the label of some          " ..
+      "previously defined value, or  " ..
+      "an expression. The data may   " ..
+      "not exceed one byte. The      " ..
+      "assembler's relocation feature" ..
+      "treats all external and relo- " ..
+      "catable symbols as 16-bit     " ..
+      "addresses. When one of these  " ..
+      "symbols appears in the operand" ..
+      "expression of an immediate    " ..
+      "instruction, it must be       " ..
+      "preceded by either the HIGH or" ..
+      "LOW operator to specify which " ..
+      "byte of the address is to be  " ..
+      "used in the evaluation of the " ..
+      "expression. When neither      " ..
+      "operator is present, the      " ..
+      "assembler assumes the LOW     " ..
+      "operator and issues an error  " ..
+      "message.",
+      "frame.png"
+   )
 end
 
 function on_key_start ()
-	wl_run_terminal ()
+	
 end
 
 function on_key_back ()
-	wl_clear_terminal ()
+	
 end
 
 init ()

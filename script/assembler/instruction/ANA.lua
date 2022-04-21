@@ -39,19 +39,47 @@ function on_key_b ()
 end
 
 function on_key_x ()
-	wl_increment_cursor_terminal ()
+
 end
 
 function on_key_y ()
-	wl_decrement_cursor_terminal ()
+   wl_create_textbox (
+      "white", 
+      "LOGICAL AND WITH ACCUMULATOR  " ..
+      "                              " ..
+      "ANA performs a logical AND    " ..
+      "operation, using the contents " ..
+      "of the specified byte and the " ..
+      "accumulator. The result is    " ..
+      "placed in tlie accumulator. It" ..
+      "produces a one bit In the     " ..
+      "result only when the corres-  " ..
+      "ponding bits In the test data " ..
+      "and the mask data are ones.   " ..
+      "The operand must specify one  " ..
+      "of the registers A through E, " ..
+      "H or L. This instruction ANDs " ..
+      "the contents of the specified " ..
+      "register with the accumulator " ..
+      "and stores the result in the  " ..
+      "accumulator, The carry flag is" ..
+      "reset to zero. With 'm', this " ..
+      "Instruction ANDs the contents " ..
+      "of the specified memory       " ..
+      "location with the accumulator " ..
+      "and stores the result in the  " ..
+      "accumulator. The carry flag is" ..
+      "reset to zero.",
+      "frame.png"
+   )
 end
 
 function on_key_start ()
-	wl_run_terminal ()
+	
 end
 
 function on_key_back ()
-	wl_clear_terminal ()
+	
 end
 
 init ()

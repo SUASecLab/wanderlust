@@ -47,19 +47,52 @@ function on_key_b ()
 end
 
 function on_key_x ()
-	wl_increment_cursor_terminal ()
+	
 end
 
 function on_key_y ()
-	wl_decrement_cursor_terminal ()
+	wl_create_textbox (
+      "white", 
+      "ADD IMMEDIATE                 " ..
+      "                              " ..
+      "ADI adds the contents of the  " ..
+      "second instruction byte of the" ..
+      "contents of the accumulator   " ..
+      "and stores the result in the  " ..
+      "accumulator. The operand      " ..
+      "specifies the actual data to  " ..
+      "be added to the accumulator   " ..
+      "This data may be In the form  " ..
+      "of a number, an ASCII constant" ..
+      "or the label of a previously  " ..
+      "defined value or expression.  " ..
+      "The data may not exceed one   " ..
+      "byte. The assembler's relo-   " ..
+      "cation feature treats all ext-" ..
+      "ernal and relocatable symbols " ..
+      "as 16-bit addresses. When one " ..
+      "of these symbols appears in   " ..
+      "the operand expression of an  " ..
+      "immediate instruction, it must" ..
+      "be preceded by either the HIGH" ..
+      "or LOW operator to specify    " ..
+      "which byte of the address is  " ..
+      "to be used In the evaluation  " ..
+      "of the expression. When       " ..
+      "neither operator is present.  " ..
+      "the assembler assumes the LOW " ..
+      "operator and Issues an error  " ..
+      "message.", 
+      "frame.png"
+   )
 end
 
 function on_key_start ()
-	wl_run_terminal ()
+
 end
 
 function on_key_back ()
-	wl_clear_terminal ()
+
 end
 
 init ()

@@ -29,12 +29,12 @@ function init ()
 
    wl_rundown_task ()
 
-   wl_create_entity (2, 8,8, "New Game", "script/menu.main/menu.button.new_game.lua", "white", "blue", "yellow", "gray")
-   wl_create_entity (2, 8,16, "Continue", "script/menu.main/menu.button.continue.lua", "white", "blue", "yellow", "gray")
-   wl_create_entity (2, 8,24, "Options", "script/menu.main/menu.button.options.lua", "white", "blue", "yellow", "gray")
-   wl_create_entity (2, 8,32, "Terminal", "script/menu.main/menu.button.terminal.lua", "white", "blue", "yellow", "gray")
-   wl_create_entity (2, 8,40, "Assembler", "script/menu.main/menu.button.assembler.lua", "white", "blue", "yellow", "gray")
-   wl_create_entity (2, 8,48, "Quit", "script/menu.main/menu.button.quit.lua", "white", "blue", "yellow", "gray")
+   wl_create_entity (2, 8,8, "New Game", "script/menu.main/menu.button.new_game.lua", "white", "red", "yellow", "gray")
+   wl_create_entity (2, 8,16, "Continue", "script/menu.main/menu.button.continue.lua", "white", "red", "yellow", "gray")
+   wl_create_entity (2, 8,24, "Options", "script/menu.main/menu.button.options.lua", "white", "red", "yellow", "gray")
+   wl_create_entity (2, 8,32, "Terminal", "script/menu.main/menu.button.terminal.lua", "white", "red", "yellow", "gray")
+   wl_create_entity (2, 8,40, "Assembler", "script/menu.main/menu.button.assembler.lua", "white", "red", "yellow", "gray")
+   wl_create_entity (2, 8,48, "Quit", "script/menu.main/menu.button.quit.lua", "white", "red", "yellow", "gray")
 
    wl_fetch_state ()
 

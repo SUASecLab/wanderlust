@@ -43,23 +43,50 @@ function on_key_a ()
 end
 
 function on_key_b ()
-      wl_repeal_menu ()
+
 end
 
 function on_key_x ()
-	wl_increment_cursor_terminal ()
+
 end
 
 function on_key_y ()
-	wl_decrement_cursor_terminal ()
+	wl_create_textbox (
+      "white", 
+      "CALL IF CARRY                 " ..
+      "                              " ..
+  		"The CC instnlction combines   " ..
+  		"functions of the JC and PUSH  " ..
+  		"instructions. CC tests the    " ..
+  		"setting of the carry flag. If " ..
+  		"the flag is ,et to one, CC    " ..
+  		"pushes the contents of the    " ..
+  		"program counter onto the stack" ..
+  		"and then jumps to the address " ..
+  		"specified in bytes 2 and 3 of " ..
+  		"the CC instruction. If the    " ..
+  		"flag is reset to zero, program" ..
+  		"execution continues whh the   " ..
+  		"next sequential instruction.  " ..
+		"Although the use of a label is" ..
+		"most common, the address may  " ..
+		"also be specified as a number " ..
+		"or expression.                " ..
+		"For the sake of brevity, an   " ..
+		"example is given for the CALL " ..
+		"instruction but will not for  " ..
+		"each of its closely related   " .. 
+		"variants.",
+      "frame.png"
+   )
 end
 
 function on_key_start ()
-	wl_run_terminal ()
+
 end
 
 function on_key_back ()
-	wl_clear_terminal ()
+
 end
 
 init ()
