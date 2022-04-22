@@ -47,19 +47,36 @@ function on_key_b ()
 end
 
 function on_key_x ()
-	wl_increment_cursor_terminal ()
+
 end
 
 function on_key_y ()
-	wl_decrement_cursor_terminal ()
+   wl_create_textbox (
+      "white", 
+      "GOTO, INDIRECT INSTRUCTION    " ..
+      "                              " ..
+      "Not part of the instruction-  " ..
+      "set the statement can be used " ..
+      "with 16 Bit parameter to jump " ..
+      "to any location in the memory " ..
+      "space where the emulated cpu  " ..
+      "has access as well. When it's " ..
+      "called no bytes are written to" ..
+      "the memory but the cursor is  " ..
+      "set to the referred address   " ..
+      "where insertion of the next   " ..
+      "instruction or byte value will" ..
+      "be applied.",
+      "frame.png"
+   ) 
 end
 
 function on_key_start ()
-	wl_run_terminal ()
+
 end
 
 function on_key_back ()
-	wl_clear_terminal ()
+
 end
 
 init ()
