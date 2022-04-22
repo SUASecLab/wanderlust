@@ -31,19 +31,42 @@ function on_key_a ()
 end
 
 function on_key_x ()
-	wl_increment_cursor_terminal ()
+	
 end
 
 function on_key_y ()
-	wl_decrement_cursor_terminal ()
+	wl_create_textbox (
+      "white", 
+      "DOUBLE REGISTER ADD           " ..
+      "                              " ..
+      "DAD adds the 16-bit value in  " ..
+      "the specified register pair to" ..
+      "the contents of the H and L   " ..
+      "register pair. The result is  " ..
+      "stored in H and L. DAD may add" ..
+      "only the contents of the B&C, " ..
+      "D&E, H&L, or the SP register  " ..
+      "pairs to the contents of H, L." ..
+      "Notice that the letter H must " ..
+      "be used to specify that the   " ..
+      "H and L register pair is to be" ..
+      "added to Itself.              " ..
+      "DAD sets the                  " ..
+      "carry flag ON if there is a   " ..
+      "carry out of the registers H, " ..
+      "L. DAD will not affect any of " ..
+      "the conditional flags other   " ..
+      "than the carry flag.",
+      "frame.png"
+   ) 	
 end
 
 function on_key_start ()
-	wl_run_terminal ()
+	
 end
 
 function on_key_back ()
-	wl_clear_terminal ()
+	
 end
 
 init ()

@@ -48,12 +48,11 @@ function on_key_a ()
 	v = 40	-- offset x
 	m = 20	-- rows
 	n = 3	-- columns
-	s = 16	--
-	x = 8
-	y = s	
+	s = 16	-- base ordinate for y
+	x = 8   -- base ordinate for x
+	y = s	-- initial height from where to beginn with a column
 
 	wl_create_menu ("pause", x, y, "frame.png")
-
 
 	for c = 0,n do
 		y = s
@@ -69,7 +68,6 @@ function on_key_a ()
 				"yellow",
 				"gray"
 			)
-			print (table [c][r])
 			y = y + u
 		end
 		x = x + v
@@ -79,7 +77,7 @@ function on_key_a ()
 
 	wl_rundown_task ()
 
-	wl_select_menu_entity ("ACI")
+	wl_select_menu_entity (table [0][1])
 end
 
 function on_key_x ()

@@ -35,19 +35,35 @@ function on_key_b ()
 end
 
 function on_key_x ()
-	wl_increment_cursor_terminal ()
+
 end
 
 function on_key_y ()
-	wl_decrement_cursor_terminal ()
+   wl_create_textbox (
+      "white", 
+      "DECREMENT REGISTER PAIR       " ..
+      "                              " ..
+      "DCX decrements the contents of" ..
+      "the specified register pair by" ..
+      "one.                          " .. 
+      "DCX does not affect any of the" ..
+      "conditional flags.            " ..
+		"Because DCX does preserves all" ..
+		"of the flags, it can be used  " ..
+		"for address modification in   " ..
+		"any instruction sequence that " ..
+		"relies on the passing of the  " ..
+		"flags.",
+      "frame.png"
+   ) 
 end
 
 function on_key_start ()
-	wl_run_terminal ()
+
 end
 
 function on_key_back ()
-	wl_clear_terminal ()
+
 end
 
 init ()

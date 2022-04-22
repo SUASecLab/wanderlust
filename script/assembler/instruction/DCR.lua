@@ -39,19 +39,44 @@ function on_key_b ()
 end
 
 function on_key_x ()
-	wl_increment_cursor_terminal ()
+
 end
 
 function on_key_y ()
-	wl_decrement_cursor_terminal ()
+   wl_create_textbox (
+      "white", 
+      "DECREMENT                     " ..
+      "                              " ..
+      "DCR subtracts one from the    " ..
+      "content of the specified byte." ..
+      "DCR affects all the condition " ..
+      "flags except the carry flag.  " ..
+      "Because DCR preserves the     " ..
+      "carry flag, it can be used    " ..
+      "within a multi-byte arithmetic" ..
+      "routine to decrement character" ..
+      "counts and similar purposes.  " ..
+      "The operand must specify one  " ..
+      "of the registers A through E, " ..
+      "H or L. It will subtract one  " ..
+      "from the contents of the      " ..
+      "specified register.           " ..
+      "This instruction subtracts one" ..
+      "from the contents of the      " ..
+      "memory location addressed by  " ..
+      "the H and L registers. M is a " ..
+      "symbol in reference to the H  " ..
+      "and L registers.",
+      "frame.png"
+   ) 
 end
 
 function on_key_start ()
-	wl_run_terminal ()
+
 end
 
 function on_key_back ()
-	wl_clear_terminal ()
+
 end
 
 init ()
