@@ -47,19 +47,39 @@ function on_key_b ()
 end
 
 function on_key_x ()
-	wl_increment_cursor_terminal ()
+
 end
 
 function on_key_y ()
-	wl_decrement_cursor_terminal ()
+	wl_create_textbox (
+      "white", 
+      "JUMP IF CARRY                 " ..
+      "                              " ..
+      "The instruction tests the set-" ..
+      "ting of the carry flag. If the" .. 
+      "flag is set to one, program   " ..
+      "execution will resume at the  " ..
+      "address spezified in the JC   " ..
+      "instruction. If the flag is   " ..
+      "reset to 0, the execution con-" ..
+      "tinues by the next sequential " ..
+		"instruction.                  " ..
+		"The address may be specified  " ..
+		"as a number, a label, or an   " ..
+		"expression. The assembler in- " ..
+		"verts the high and low address" ..
+		"bytes when it assembles the   " ..
+		"instruction.",
+      "frame.png"
+   )
 end
 
 function on_key_start ()
-	wl_run_terminal ()
+
 end
 
 function on_key_back ()
-	wl_clear_terminal ()
+
 end
 
 init ()

@@ -47,19 +47,42 @@ function on_key_b ()
 end
 
 function on_key_x ()
-	wl_increment_cursor_terminal ()
+
 end
 
 function on_key_y ()
-	wl_decrement_cursor_terminal ()
+	wl_create_textbox (
+      "white", 
+      "JUMP IF NOT ZERO              " ..
+      "                              " ..
+      "The JNZ Instruction tests the " ..
+      "setting of the zero flag. If  " ..
+      "the contents of the accu-     " ..
+      "mulator are not zero where    " ..
+      "'zero flag = 0', program exe- " ..
+      "cution resumes at the address " ..
+      "specified in the JNZ in-      " ..
+      "struction. If the contents of " ..
+      "the accumulator are zero where" ..
+      "'zero flag = 1', execution    " ..
+      "continues with the next seq-  " ..
+      "quential instruction.         " ..
+      "The address may be specified  " ..
+      "as a number, a label, or an   " ..
+      "expression. The assembler in- " ..
+      "verts the high and low address" ..
+      "bytes when it assembles the   " ..
+      "instruction.",
+      "frame.png"
+   )
 end
 
 function on_key_start ()
-	wl_run_terminal ()
+
 end
 
 function on_key_back ()
-	wl_clear_terminal ()
+
 end
 
 init ()

@@ -39,19 +39,56 @@ function on_key_b ()
 end
 
 function on_key_x ()
-	wl_increment_cursor_terminal ()
+	
 end
 
 function on_key_y ()
-	wl_decrement_cursor_terminal ()
+   wl_create_textbox (
+      "white", 
+      "INCREMENT                     " ..
+      "                              " ..
+      "INR adds one to the content of" ..
+      "the specified byte. It affects" ..
+      "all of the condition flags ex-" ..
+      "cept the carry flag.          " ..
+      "Because it preserves the carry" ..
+      "flag, it can be used within   " ..
+      "multi-byte arithmetic routines" ..
+      "for incrementing character    " ..
+      "counts and similar purposes.",
+      "frame.png"
+   )
+   wl_create_textbox (
+      "white", 
+      "INCREMENT REGISTER            " ..
+      "                              " ..
+      "The operand must specify one  " ..
+      "of the registers A through E, " ..
+      "H or L. The Instruction adds  " ..
+      "one to the contents of the    " ..
+      "specified register,",
+      "frame.png"
+   )
+   wl_create_textbox (
+      "white", 
+      "INCREMENT MEMORY              " ..
+      "                              " ..
+      "This instruction increments by" ..
+      "one the contents of the memory" ..
+      "location addressed by the H   " ..
+      "and L registers. M is a sym-  " ..
+      "bolic reference to the H and L" ..
+      "registers.",
+      "frame.png"
+   )
 end
 
 function on_key_start ()
-	wl_run_terminal ()
+	
 end
 
 function on_key_back ()
-	wl_clear_terminal ()
+	
 end
 
 init ()

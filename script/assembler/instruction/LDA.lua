@@ -47,19 +47,35 @@ function on_key_b ()
 end
 
 function on_key_x ()
-	wl_increment_cursor_terminal ()
+	
 end
 
 function on_key_y ()
-	wl_decrement_cursor_terminal ()
+	wl_create_textbox (
+      "white", 
+      "LOAD ACCUMULATOR DIRECT       " ..
+      "                              " ..
+      "LDA loads the accumulator with" ..
+      "a copy of the byte at the loc-" ..
+      "cation specified in bytes two " ..
+      "and three of the LDA in-      " ..
+      "struction.                    " ..
+      "The address may be stated as a" ..
+      "number, a previously defined  " ..
+      "label, or an expression.      " ..
+      "The assembler inverts the high" ..
+      "and low address bytes when it " ..
+      "builds the instruction.",
+      "frame.png"
+   )
 end
 
 function on_key_start ()
-	wl_run_terminal ()
+	
 end
 
 function on_key_back ()
-	wl_clear_terminal ()
+	
 end
 
 init ()

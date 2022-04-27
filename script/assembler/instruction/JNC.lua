@@ -47,19 +47,40 @@ function on_key_b ()
 end
 
 function on_key_x ()
-	wl_increment_cursor_terminal ()
+
 end
 
 function on_key_y ()
-	wl_decrement_cursor_terminal ()
+	wl_create_textbox (
+      "white", 
+      "JUMP IF NO CARRY              " ..
+      "                              " ..
+      "The INC instruction tests the " ..
+      "setting of the carry flag. If " ..
+      "there is no carry:            " ..
+      "               carry flag = 0," ..
+      "program execution resumes at  " ..
+      "the address specified in the  " ..
+      "INC instruction. If there is a" ..
+      "carry (carry flag = 1), exe-  " ..
+      "cution continues with the next" ..
+      "sequential Instruction.       " ..
+      "The address may be specified  " ..
+      "as a number, a label, or an   " ..
+      "expression. The assembler in- " ..
+      "verts the high and low address" ..
+      "byte; when it assembles the   " ..
+      "instruction.                  ",
+      "frame.png"
+   )
 end
 
 function on_key_start ()
-	wl_run_terminal ()
+	
 end
 
 function on_key_back ()
-	wl_clear_terminal ()
+	
 end
 
 init ()

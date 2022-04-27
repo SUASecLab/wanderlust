@@ -33,19 +33,33 @@ function on_key_b ()
 end
 
 function on_key_x ()
-	wl_increment_cursor_terminal ()
+
 end
 
 function on_key_y ()
-	wl_decrement_cursor_terminal ()
+	wl_create_textbox (
+      "white", 
+      "LOAD ACCUMULATOR INDIRECT     " ..
+      "                              " ..
+      "LDAX loads the accumulator    " ..
+      "with a copy of the byte stored" ..
+      "at the memory location addres-" ..
+      "sed by register pair B or D.  " ..
+      "The operand B specifies the B " ..
+      "and C register pair and vice  " ..
+      "versa D the pair of D and E.  " ..
+      "This instruction may specify  " ..
+      "only the B or D register pair.",
+      "frame.png"
+   )
 end
 
 function on_key_start ()
-	wl_run_terminal ()
+
 end
 
 function on_key_back ()
-	wl_clear_terminal ()
+
 end
 
 init ()

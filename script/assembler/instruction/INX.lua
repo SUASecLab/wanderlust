@@ -31,19 +31,39 @@ function on_key_a ()
 end
 
 function on_key_x ()
-	wl_increment_cursor_terminal ()
+	
 end
 
 function on_key_y ()
-	wl_decrement_cursor_terminal ()
+	wl_create_textbox (
+      "white", 
+      "INCREMENT REGISTER PAIR       " ..
+      "                              " ..
+      "The instruction adds one to   " ..
+      "the contents of the specified " ..
+      "register pair. It affects none" ..
+      "of the condition flags. Be-   " ..
+      "cause INX preserves all of the" ..
+      "condition flags, it can be    " ..
+      "used for address modification " ..
+      "within multi-byte arithmetic  " ..
+      "routines.                     " ..
+      "INX may increment only the BC," ..
+      "DE, HL or the 'Stack Pointer' " ..
+      "(SP) register pairs.          " ..
+      "Notice that the letter H must " ..
+      "be used to specify the H and L" ..
+      "register pair.",
+      "frame.png"
+   )
 end
 
 function on_key_start ()
-	wl_run_terminal ()
+	
 end
 
 function on_key_back ()
-	wl_clear_terminal ()
+	
 end
 
 init ()

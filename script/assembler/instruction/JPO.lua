@@ -47,19 +47,53 @@ function on_key_b ()
 end
 
 function on_key_x ()
-	wl_increment_cursor_terminal ()
+
 end
 
 function on_key_y ()
-	wl_decrement_cursor_terminal ()
+	wl_create_textbox (
+      "white", 
+      "JUMP IF PARITY ODD            " ..
+      "                              " ..
+      "Parity is odd whne the byte in" ..
+      "the accumulator has a number  " ..
+      "of one bits that is not even. " ..
+      "The parity flag is set to zero" ..
+      "to indicate this condition.   " ..
+      "The JPO Instruction tests the " ..
+      "setting of the parity flag. If" ..
+      "the parity flag is reset to   " ..
+      "zero, program execution re-   " ..
+      "sumes at the address specified" ..
+      "in the JPO instruction. If the" ..
+      "flag is set to one. execution " ..
+      "continues with the next seq-  " ..
+      "quential instruction.         " ..
+      "The address may be specified  " ..
+      "as a number. a label. or an   " ..
+      "expression. The assembler in- " ..
+      "verts the high and low address" ..
+      "bytes when it assembles the   " ..
+      "instruction.                  " ..
+      "The JPO and JPE (JMP if parity" ..
+      "even) instructions are es-    " ..
+      "pecially useful for testing   " ..
+      "the parity of Input data. How-" ..
+      "ever. the IN instruction does " ..
+      "not alter any of the condition" ..
+      "flags. The flags can be set by" ..
+      "adding OOH to the contents of " ..
+      "the accumulator.",
+      "frame.png"
+   )
 end
 
 function on_key_start ()
-	wl_run_terminal ()
+
 end
 
 function on_key_back ()
-	wl_clear_terminal ()
+
 end
 
 init ()

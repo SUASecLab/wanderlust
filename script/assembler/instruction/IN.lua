@@ -43,19 +43,40 @@ function on_key_a ()
 end
 
 function on_key_x ()
-	wl_increment_cursor_terminal ()
+	
 end
 
 function on_key_y ()
-	wl_decrement_cursor_terminal ()
+   wl_create_textbox (
+      "white", 
+      "INPUT FROM PORT               " ..
+      "                              " ..
+      "The IN instruction reads eight" ..
+      "bits of data from the speci-  " ..
+      "fied port and loads it into   " ..
+      "the accumulator.              ",
+      "frame.png"
+   )
+	wl_create_textbox (
+      "white", 
+      "KEEP IN MIND                  " ..
+      "                              " ..
+      "This description is restricted" ..
+      "to the exact function of the  " ..
+      "in instruction. Input/output  " ..
+      "structures are described in   " ..
+      "the 8080 or 8085 Microcomputer" ..
+		"Systems User's Manual.        ",
+      "frame.png"
+   )
 end
 
 function on_key_start ()
-	wl_run_terminal ()
+	
 end
 
 function on_key_back ()
-	wl_clear_terminal ()
+	
 end
 
 init ()

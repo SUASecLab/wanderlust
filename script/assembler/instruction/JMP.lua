@@ -47,19 +47,39 @@ function on_key_b ()
 end
 
 function on_key_x ()
-	wl_increment_cursor_terminal ()
+
 end
 
 function on_key_y ()
-	wl_decrement_cursor_terminal ()
+	wl_create_textbox (
+      "white", 
+      "JUMP                          " ..
+      "                              " ..
+      "The IMP instruction alters the" ..
+      "execution sequence by loading " ..
+      "the address in its second and " ..
+      "third bytes into the program  " ..
+      "counter.                      " ..
+      "The address may be specified  " ..
+      "as a number, a label, or an   " ..
+      "expression. The assembler in- " ..
+      "verts the high and low address" ..
+      "bytes when it assembles the   " ..
+      "address.                      " ..
+      "Examples of the variations of " ..
+      "the Jump instruction appear in" ..
+      "the description of the JPO in-" ..
+      "struction.",
+      "frame.png"
+   )
 end
 
 function on_key_start ()
-	wl_run_terminal ()
+
 end
 
 function on_key_back ()
-	wl_clear_terminal ()
+
 end
 
 init ()

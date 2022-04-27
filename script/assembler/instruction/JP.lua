@@ -47,19 +47,36 @@ function on_key_b ()
 end
 
 function on_key_x ()
-	wl_increment_cursor_terminal ()
+
 end
 
 function on_key_y ()
-	wl_decrement_cursor_terminal ()
+	wl_create_textbox (
+      "white", 
+      "JUMP IF POSITIVE              " ..
+      "                              " ..
+      "The JP instruction tests the  " ..
+      "setting of the sign flag. If  " ..
+      "the contents of the accu-     " ..
+      "mulator are positive, where   " ..
+      "'sign flag = 0' program exec- " ..
+      "cution resumes at the address " ..
+      "specified in this Instruction." ..
+      "If the contents of the accu-  " ..
+      "mulator are minus, where      " ..
+      "'sign flag 1', execution con- " ..
+      "tinues with the next seq-     " ..
+      "quential instruction.",
+      "frame.png"
+   )
 end
 
 function on_key_start ()
-	wl_run_terminal ()
+
 end
 
 function on_key_back ()
-	wl_clear_terminal ()
+
 end
 
 init ()
